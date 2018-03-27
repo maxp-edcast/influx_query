@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+Dir.glob("./*.gem").each { |path| `rm #{path}` }
+puts `gem uninstall -x influx_query`
+puts `gem build influx_query.gemspec`
+Dir.glob("./*.gem").each { |path| puts `gem install -f #{path}` }

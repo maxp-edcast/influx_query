@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'influx_query'
+class InfluxQuery::CLI < Thor
+  desc "test", "run tests"
+  def test
+    puts "No tests have been wrritten"
+    exit
+  end
+end
+InfluxQuery::CLI.start ARGV
