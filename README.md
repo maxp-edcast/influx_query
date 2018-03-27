@@ -67,7 +67,7 @@ are controlled by the chaining dsl.
 - `params`: the values which will be interpolated into the final query.
 - `select_columns`: an array of strings.
   Defaults to `["*"]` and will stay that way unless manually altered.
-- `source`: string, the measurement to fetch data from, e.g. "things"s
+- `source`: string, the measurement to fetch data from, e.g. "things"
 
 In between `#initialize` and `#resolve`, other methods can be called:
 
@@ -83,7 +83,7 @@ Args:
 ```
 query
   .filter!(:start, "time", "<", "now() - 30d")
-  .filter!(:start, "time", ">", "now() - 15d")
+  .filter!(:end, "time", ">", "now() - 15d")
 ```
 
 This previous example has its functionality served by a helper method
